@@ -37,6 +37,7 @@ resource "alicloud_vswitch" "vsw" {
    availability_zone = "cn-hangzhou-b"
 }
 ```
+说明：alicloud_vpc 的name需要自定义（建议在示例demo中增加组号后缀）
 
 3、执行初始化和创建资源命令
 
@@ -67,6 +68,8 @@ resource "alicloud_security_group_rule" "allow_all_tcp" {
   cidr_ip           = "0.0.0.0/0"
 }
 ```
+说明：alicloud_security_group 的name需要自定义（建议在示例demo中增加组号后缀）
+
 5、查看执行计划和执行创建资源命令
 
 `terraform plan`
@@ -104,6 +107,7 @@ output "slb_public_ip"{
   value = alicloud_slb.slb.address
 }
 ```
+说明：alicloud_slb 的name需要自定义（建议在示例demo中增加组号后缀）
 7、查看执行计划和执行创建资源命令
 
 `terraform plan`
@@ -139,6 +143,8 @@ resource "alicloud_ess_scaling_configuration" "config" {
   force_delete= true
 }
 ```
+说明：alicloud_ess_scaling_group 的scaling_group_name需要自定义（建议在示例demo中增加组号后缀）
+
 9、查看执行计划和执行创建资源命令
 
 `terraform plan`
